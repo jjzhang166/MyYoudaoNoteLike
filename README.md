@@ -1,1 +1,4 @@
-#MyYoudaoNoteLike
+#仿照有道云笔记实现的Qt界面
+
+qt版本：5.3.2
+编译器：mingw32
