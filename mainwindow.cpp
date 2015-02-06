@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 
 #include "tabitem.h"
+#include "treeviewtest.h"
+#include "collpsetestform.h"
 
 #include <windows.h>
 #include <QMouseEvent>
@@ -16,16 +18,17 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     this->setWindowFlags(Qt::FramelessWindowHint);
 
-    QGridLayout* l=(QGridLayout*)ui->scrollAreaWidgetContents_2->layout();
+    QLayout* l=ui->scrollAreaWidgetContents_2->layout();
 
-    for(int i=0;i<10;i++){
+    l->addWidget(new CollpseTestForm(this));
 
-        for(int j=0;j<5;j++){
+//    for(int i=0;i<10;i++){
 
-            l->addWidget(new tabItem(this),i,j);
-        }
+//        for(int j=0;j<2;j++){
+//            l->addWidget(new tabItem(j%2,this),i,j);
+//        }
 
-    }
+//    }
 
     ui->splitter->setStretchFactor(0,0);
     ui->splitter->setStretchFactor(1,1);

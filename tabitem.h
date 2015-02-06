@@ -12,7 +12,7 @@ class tabItem : public QWidget
     Q_OBJECT
 
 public:
-    explicit tabItem(QWidget *parent = 0);
+    explicit tabItem(int type=0,QWidget *parent = 0);
     ~tabItem();
 
 private:

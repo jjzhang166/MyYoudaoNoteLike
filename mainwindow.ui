@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>519</width>
-    <height>446</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -109,7 +109,7 @@
 }
 
 #left_scrollArea QListWidget::item{
-	padding:5px 5px 5px 20px;
+	padding:9px 5px 9px 20px;
 	border:0px;
 	color: rgb(144, 144, 144);
 }
@@ -129,7 +129,7 @@
 	color:rgb(69,124,216);
 }
 
-#right_scrollArea QWidget{
+#right_scrollArea &gt; QWidget{
 	background-color: rgb(255, 255, 255);
 }</string>
   </property>
@@ -193,11 +193,17 @@
           <bool>true</bool>
          </property>
          <widget class="QScrollArea" name="left_scrollArea">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
           <property name="verticalScrollBarPolicy">
            <enum>Qt::ScrollBarAsNeeded</enum>
           </property>
           <property name="sizeAdjustPolicy">
-           <enum>QAbstractScrollArea::AdjustToContents</enum>
+           <enum>QAbstractScrollArea::AdjustIgnored</enum>
           </property>
           <property name="widgetResizable">
            <bool>true</bool>
@@ -207,8 +213,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>439</width>
-             <height>374</height>
+             <width>677</width>
+             <height>528</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -287,6 +293,9 @@
           </widget>
          </widget>
          <widget class="QScrollArea" name="right_scrollArea">
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustToContents</enum>
+          </property>
           <property name="widgetResizable">
            <bool>true</bool>
           </property>
@@ -295,11 +304,11 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>77</width>
-             <height>374</height>
+             <width>120</width>
+             <height>528</height>
             </rect>
            </property>
-           <layout class="QGridLayout" name="gridLayout"/>
+           <layout class="QVBoxLayout" name="verticalLayout_3"/>
           </widget>
          </widget>
         </widget>
