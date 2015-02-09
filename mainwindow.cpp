@@ -5,6 +5,9 @@
 #include "treeviewtest.h"
 #include "collpsetestform.h"
 
+
+#include "collapseview.h"
+
 #include <windows.h>
 #include <QMouseEvent>
 #include <QRect>
@@ -20,15 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QLayout* l=ui->scrollAreaWidgetContents_2->layout();
 
-    l->addWidget(new CollpseTestForm(this));
-
-//    for(int i=0;i<10;i++){
-
-//        for(int j=0;j<2;j++){
-//            l->addWidget(new tabItem(j%2,this),i,j);
-//        }
-
-//    }
+    l->addWidget(new CollapseView(this));
 
     ui->splitter->setStretchFactor(0,0);
     ui->splitter->setStretchFactor(1,1);

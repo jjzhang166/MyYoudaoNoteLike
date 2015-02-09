@@ -1,6 +1,8 @@
 #include "collapseview.h"
 #include "ui_collapseview.h"
 
+
+#include "collapseviewitem.h"
 #include <QDebug>
 
 CollapseView::CollapseView(QWidget *parent) :
@@ -9,7 +11,16 @@ CollapseView::CollapseView(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    connect(ui->pushButton,SIGNAL(clicked()),this,SLOT(butClick()));
+    ui->widget->layout()->addWidget(new CollapseViewItem("我的好友",this));
+
+    ui->widget->layout()->addWidget(new CollapseViewItem("那些年",this));
+
+    ui->widget->layout()->addWidget(new CollapseViewItem("陌生人",this));
+
+
+    //ui->scrollAreaWidgetContents->resize(this->width(),this->height());
+
+    //ui->scrollArea->resize(this->width(),this->height());
 
 }
 
@@ -20,6 +31,6 @@ CollapseView::~CollapseView()
 
 void CollapseView::butClick()
 {
-    ui->listWidget->setHidden(!ui->listWidget->isHidden());
+    //ui->listWidget->setHidden(!ui->listWidget->isHidden());
     qDebug()<<"xxx";
 }

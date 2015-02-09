@@ -34,7 +34,10 @@ SOURCES += main.cpp\
     treeviewtest.cpp \
     collapseview.cpp \
     collpsetestform.cpp \
-    testadjust.cpp
+    testadjust.cpp \
+    collapseviewitem.cpp \
+    slidewindow.cpp \
+    litteriem.cpp
 
 HEADERS  += mainwindow.h \
     tabitem.h \
@@ -43,11 +46,20 @@ HEADERS  += mainwindow.h \
     treeviewtest.h \
     collapseview.h \
     collpsetestform.h \
-    testadjust.h
+    testadjust.h \
+    collapseviewitem.h \
+    slidewindow.h \
+    litteriem.h
 
 FORMS    += mainwindow.ui \
     tabitem.ui \
     treeviewtest.ui \
     collapseview.ui \
     collpsetestform.ui \
-    testadjust.ui
+    testadjust.ui \
+    collapseviewitem.ui \
+    slidewindow.ui \
+    litteriem.ui
+
+RESOURCES += \
+    rs/rs.qrc

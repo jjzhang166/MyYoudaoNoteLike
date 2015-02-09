@@ -21,21 +21,13 @@
      width: 15px;
  }
 
- QScrollBar:horizontal {
-     border: 0px;
-     height: 15px;
- }
-
+ 
 
  QScrollBar::handle:vertical {
      background: rgba(69,124,216,150);
     
  }
-
- QScrollBar::handle:horizontal {
-     background: rgba(69,124,216,150);
-     
- }
+ 
 
  
  QScrollBar::add-line:vertical {
